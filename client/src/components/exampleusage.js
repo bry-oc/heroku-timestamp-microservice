@@ -6,9 +6,9 @@ function ExampleUsage(){
             <hr></hr>
             < Header headerTitle="Example Usage: Accepted Formats"/>
             <h3>Coordinated Universal Time (UTC)</h3>
-            <p>UTC is the primary time standard used across the world.  It is within one second of mean solar time at 0(dg) longitude and does not adjust for daylight saving time.  Greenwich Mean Time is the time zone where the UTC standard is measured.</p>
+            <p>UTC is the primary time standard used across the world.  It is within one second of mean solar time at 0&#176; longitude and does not adjust for daylight saving time.  Greenwich Mean Time is the time zone where the UTC standard is measured.</p>
             <ul>
-                <li>Enter a date following YYYY-MM-DD format (e.g. 2021-01-02 or server-url/api/2021-01-02)</li>
+                <li>Enter a date following YYYY-MM-DD format (e.g. 2021-01-02 or <a href="https://timestamp-microservice-bryoc.herokuapp.com/api/2021-01-02" target="_blank">https://timestamp-microservice-bryoc.herokuapp.com/api/2021-01-02</a></li>
                 <li>Any string containing, a year, a month(numbered or named), and a day</li>
             </ul>
             <h3>Unix Timestamps</h3>
