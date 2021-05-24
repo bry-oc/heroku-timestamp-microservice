@@ -15,7 +15,7 @@ function Button(){
             .then((data) => {
                 if(!data.error){
                     setUTC(data.utc);
-                    setUNIX(data.unix / 1000);
+                    setUNIX(data.unix);
                 }else {
                     setUTC("Invalid");
                     setUNIX("Invalid");
@@ -34,7 +34,7 @@ function Button(){
                 */}
                 <input type="submit" value="Submit"></input>
             </form>
-            <p>unix: {!unix ? "None" : unix}, utc: {!utc ? "None" : utc} </p>
+            <p>Unix: {!unix ? "None": unix === "Invalid" ? "Invalid" : (unix.toLocaleString(undefined) + " seconds")}, UTC: {!utc ? "None" : utc} </p>
         </div>
     );
 }

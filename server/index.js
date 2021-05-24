@@ -22,7 +22,7 @@ function createTimestamp(timestamp){
     let seconds = unixTime.getUTCSeconds() > 9 ? unixTime.getUTCSeconds() : "0" + unixTime.getUTCSeconds();
     let utcTime =  weekday + ", " + day + " " + month + " " + year + " " + hour + ":" + minutes + ":" + seconds + " GMT"; 
     //console.log({unix: unixSeconds, utc: utcTime})
-    return {unix: unixSeconds / 1000, utc: utcTime};
+    return {unix: parseInt((unixSeconds / 1000).toFixed(0)), utc: utcTime};
 }
 
 //given format yyyy-mm-dd
