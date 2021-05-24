@@ -87,6 +87,10 @@ app.get("/api/:date?", function(req, res){
     }
 });
 
+app.get('*', function(request, response) {
+    response.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
+});
+
 app.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
 });
