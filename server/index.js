@@ -1,6 +1,9 @@
 const express = require("express");
+const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
+
+app.use(express.static(path.resolve(__dirname, '../client/build')));
 
 const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
