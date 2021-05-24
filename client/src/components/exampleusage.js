@@ -14,11 +14,11 @@ function ExampleUsage(){
             <h3>Unix Timestamps</h3>
             <p>Unix time is the number of seconds that have elapsed since the Unix epoch, minus leap seconds.  The Unix epoch is 00:00:00 UTC on 1 January 1970.</p>
             <ul>
-                <li>You may enter any number as a Unix timestamp in milliseconds</li>
+                <li>You may enter any number as a Unix timestamp in seconds</li>
             </ul>
             <h3>Example Output: </h3>
-            <p>unix: 1607990400000, utc: Tue, 15 Dec 2020 00:00:00 GMT</p>
-            <p>unix:1621893117922, utc: Mon, 24 May 2021 21:51:57 GMT</p>
+            <p>unix: 1607990400, utc: Tue, 15 Dec 2020 00:00:00 GMT</p>
+            <p>unix: 1621814400, utc: Mon, 24 May 2021 21:51:57 GMT</p>
         </div>
     )
 }

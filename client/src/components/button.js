@@ -7,12 +7,15 @@ function Button(){
     let getTimestamp = (e) => {
         e.preventDefault();
         let timestamp = e.target.timestamp.value;
+        if(typeof(timestamp) === "number"){
+            timestamp = timestamp * 1000;
+        }
         fetch("/api/" + timestamp)
             .then((res) => res.json())
             .then((data) => {
                 if(!data.error){
                     setUTC(data.utc);
-                    setUNIX(data.unix);
+                    setUNIX(data.unix / 1000);
                 }else {
                     setUTC("Invalid");
                     setUNIX("Invalid");
