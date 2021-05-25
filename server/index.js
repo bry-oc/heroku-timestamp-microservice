@@ -74,7 +74,7 @@ app.get("/api/:date?", function(req, res){
         } else if (unixRegex.test(timestamp)){
             //console.log("unix!!!");
             //console.log(timestamp);
-            let timestampResult = createTimestamp(timestamp);
+            let timestampResult = createTimestamp(parseInt(timestamp));
             res.json(timestampResult);
         } else {
             let timestamp = req.params.date;
