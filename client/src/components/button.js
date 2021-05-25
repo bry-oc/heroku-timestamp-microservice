@@ -7,9 +7,6 @@ function Button(){
     let getTimestamp = (e) => {
         e.preventDefault();
         let timestamp = e.target.timestamp.value;
-        if(typeof(timestamp) === "number"){
-            timestamp = timestamp * 1000;
-        }
         fetch("/api/" + timestamp)
             .then((res) => res.json())
             .then((data) => {
@@ -34,7 +31,7 @@ function Button(){
                 */}
                 <input type="submit" value="Submit"></input>
             </form>
-            <p>Unix: {!unix ? "None": unix === "Invalid" ? "Invalid" : (unix.toLocaleString(undefined) + " seconds")}, UTC: {!utc ? "None" : utc} </p>
+            <p>Unix: {!unix ? "None": unix === "Invalid" ? "Invalid" : (unix.toLocaleString(undefined) + " milliseconds")}, UTC: {!utc ? "None" : utc} </p>
         </div>
     );
 }
