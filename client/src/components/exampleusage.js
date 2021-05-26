@@ -1,6 +1,7 @@
 import Header from './header.js'
 
 function ExampleUsage(){
+    const baseURL = window.location.href;
     return(
         <div id="exampleusage" className="container exampleUsage">
             <hr></hr>
@@ -8,7 +9,7 @@ function ExampleUsage(){
             <h3>Coordinated Universal Time (UTC)</h3>
             <p>UTC is the primary time standard used across the world.  It is within one second of mean solar time at 0&#176; longitude and does not adjust for daylight saving time.  Greenwich Mean Time is the time zone where the UTC standard is measured.</p>
             <ul>
-                <li>Enter a date following YYYY-MM-DD format (e.g. 2021-01-02 or <a href="https://timestamp-microservice-bryoc.herokuapp.com/api/2021-01-02" target="_blank" rel="noreferrer">https://timestamp-microservice-bryoc.herokuapp.com/api/2021-01-02</a></li>
+                <li>Enter a date following YYYY-MM-DD format (e.g. 2021-01-02 or <a href={baseURL+"/api/2021-01-02"} target="_blank" rel="noopener noreferrer">[baseurl]/api/2021-01-02</a></li>
                 <li>A valid date consisting of a year, a month(numbered or named), and a day in conventional language</li>
             </ul>
             <h3>Unix Timestamps</h3>
